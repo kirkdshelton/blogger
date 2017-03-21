@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blogger</title>
+    <title>Greyspace Blogger</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Montserrat" rel="stylesheet">
+<!--Second part of the magic of google web fonts -->
+<style>
+      h1 {
+        font-family: 'Baloo Bhaina', cursive; 
+      }
+      body {
+        font-family: 'Montserrat', sans-serif;
+      }
+    </style>
   </head>
-
   <body>
-
-  <p class="flash"><%= flash.notice %></p>
+  <%= render 'layouts/header' %>
+  <div class = "container">
+  <div class="row">
+  <div class="col-md-8">
+    <p class="flash"><%= flash.notice %></p>
     <%= yield %>
+  </div>
+  <div class="col-md-4"><h1>Archives</h1></div>
+</div>
+</div>
   </body>
+  <%= render 'layouts/footer' %>
 </html>
