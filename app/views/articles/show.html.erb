@@ -1,6 +1,6 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
-<button type="button" class="btn btn-success"><%= link_to "<< Back to Articles List", articles_path %></button>
+<button type="button" class="btn btn-success"><%= link_to "Back to Articles List", articles_path %></button>
     <button type="button" class="btn btn-default"><%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %></button>
 <button type="button" class="btn btn-success"><%= link_to "Edit", edit_article_path(@article) %></button>
 

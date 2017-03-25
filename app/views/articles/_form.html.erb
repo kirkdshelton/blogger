@@ -13,7 +13,7 @@
     <%= f.text_area :body, class: "form-control"  %>
   </p>
   <p>
-  
-  <%= f.submit "Create Magic!", class:"btn btn-success" %>
+  <button type="button" class="btn btn-success"><%= link_to "Back to Articles List", articles_path %></button>
+  <%= f.submit "Create New Post!", class:"btn btn-success" %>
   </p>
 <% end %>
