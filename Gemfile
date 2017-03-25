@@ -7,7 +7,7 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'sqlite3'
+
 
 gem 'rails', '~> 5.0.2'
 
@@ -29,15 +29,19 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'paperclip', '~> 5.1'
 
-
+gem 'bundler', '~> 1.14', '>= 1.14.6'
 
 
 group :production do
+
+	gem 'pg'
+	gem 'rails_12factor'
   
  end
 
 group :development, :test do
- 
+
+  gem 'sqlite3'
   
   gem 'byebug', platform: :mri
 
